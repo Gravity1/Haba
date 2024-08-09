@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.haba.ui.theme.HabaTheme
+import com.example.haba.dbaccess
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class MainActivity : ComponentActivity() {
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
+                    dbaccess()
                 }
             }
         }
@@ -36,12 +38,4 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         text = "Hello $name!",
         modifier = modifier
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    HabaTheme {
-        Greeting("Android")
-    }
 }
